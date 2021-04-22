@@ -3,6 +3,6 @@ const mongoose = require('mongoose');
 const Todo = new mongoose.Schema({
     title: String,
     completed: {type: Boolean, default: false}
-}, {timestamps: true});
+}, {timestamps: true, versionKey: false});
 
-module.exports = mongoose.model('Todo', Todo);
+module.exports ={Todo: mongoose.model('Todo', Todo)};

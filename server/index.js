@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 require('dotenv').config();
 
-mongoose.connect(process.env.DATABASE_CONNECTION_STRING, { useUnifiedTopology: true, useNewUrlParser: true }, (err) => {
+mongoose.connect(process.env.DATABASE_CONNECTION_STRING, { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false }, (err) => {
     if (err) {
         console.error('Database connection failed', err);
         process.exit(1);
