@@ -8,6 +8,8 @@ export function fetchTodos({skip, limit}){
     return async function(dispatch){
         const additionalTodos = await api.fetchTodos({skip, limit});
         dispatch({type: FETCH_TODOS, payload: {additionalTodos}});
+        const hasMoreTodos = additionalTodos.length > 0;
+        return hasMoreTodos;
     }
 }
 

@@ -1,0 +1,28 @@
+.container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    max-height: 170px;
+}
+
+.title-input {
+    font-size: 20px;
+    text-align: center;
+    &:disabled {
+        border: none;
+        color: black;
+        background: none;
+    }
+}
+
+.buttons-container {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.completed-container {
+    margin: 5px auto;
+}
